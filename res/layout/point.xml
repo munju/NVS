@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+     <ScrollView 
+     	android:id="@+id/textAreaScroller"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"    
+		android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+    	android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+    	android:scrollbarSize="12dip"
+		android:layout_x="0px" 
+		android:layout_y="25px" 
+		android:layout_margin="5dip">
+		<TableLayout 
+			android:id="@+id/TableLayout01"
+			android:stretchColumns="0" 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:gravity="center_horizontal">
+	    	<TableRow
+	    		android:id="@+id/Row01"
+	    		android:layout_width="match_parent" 
+	    		android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/editMainTitle"  
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal" 
+					android:paddingBottom="5dip" 
+					android:text="EDIT" 
+					android:textSize="10pt"
+					android:textStyle="bold"  
+					android:typeface="sans"
+					android:shadowColor="#FF0000" 
+					android:shadowDx="2" 
+					android:shadowDy="2" 
+					android:shadowRadius="5"/>
+			</TableRow>
+        	<TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tableRow1" android:layout_weight="1">
+            	<LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                	<TextView android:text="Title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView1" android:textSize="7pt" android:paddingRight="59dip"></TextView>
+                	<MultiAutoCompleteTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="vertical" android:id="@+id/title" android:text="MultiAutoCompleteTextView" android:inputType="text|textMultiLine|textShortMessage"></MultiAutoCompleteTextView>
+            	</LinearLayout>
+        	</TableRow>
+        	<TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableRow2" android:layout_weight="1">
+            	<LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                	<TextView android:text="Description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/textView2" android:paddingRight="5dip" android:textSize="7pt"></TextView>
+                	<MultiAutoCompleteTextView android:layout_height="wrap_content" android:fadeScrollbars="true" android:text="MultiAutoCompleteTextView" android:layout_width="match_parent" android:id="@+id/description" android:inputType="text|textMultiLine|textLongMessage" android:gravity="top"></MultiAutoCompleteTextView>
+            	</LinearLayout>
+        	</TableRow>
+			<TableRow 
+				android:id="@+id/Row04" 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+				android:layout_weight="1">
+				<LinearLayout 
+					android:id="@+id/linearLayout3" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView
+						android:id="@+id/category_label"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:paddingRight="5dip" 
+						android:textSize="7pt"
+						android:text="Category"></TextView>
+  					<Spinner 
+        				android:id="@+id/category_spinner"
+        				android:layout_width="match_parent"
+        				android:layout_height="wrap_content"
+       					android:prompt="@string/categories"
+    				/>
+				</LinearLayout>
+			</TableRow>
+			<TableRow 
+				android:id="@+id/Row05" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" 
+				android:layout_weight="1">
+				<LinearLayout 
+					android:id="@+id/linearLayout4" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+					<TextView 
+						android:id="@+id/lat_label"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:text="Latitude:"/>
+					<TextView 
+						android:id="@+id/lat"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:text="" />
+				</LinearLayout>
+			</TableRow>
+			<TableRow 
+				android:id="@+id/Row06" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<LinearLayout 
+					android:id="@+id/linearLayout5" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+					<TextView 
+						android:id="@+id/lng_label" 
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content" 
+						android:text="Longitude:"/>
+					<TextView 
+						android:id="@+id/lng"
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content"
+						android:text="" />
+				</LinearLayout>
+			</TableRow>
+			<TableRow 
+				android:id="@+id/Row06" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<LinearLayout 
+					android:id="@+id/linearLayout6"
+					android:gravity="center" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" android:paddingTop="10px">
+				<Button android:id="@+id/saveButton" android:layout_width="150px" android:layout_height="wrap_content" android:text="Save"></Button>
+				<Button android:id="@+id/deleteButton" android:layout_width="150px" android:layout_height="wrap_content" android:text="Delete"></Button>
+				<Button android:id="@+id/cancelButton" android:layout_width="150px" android:layout_height="wrap_content" android:text="Cancel"></Button>
+				</LinearLayout>
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

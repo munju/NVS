@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.jmuenster.poi"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application android:icon="@drawable/label" android:label="@string/app_name">
+        <activity android:name=".PointOfInterest" android:configChanges="orientation"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddEditDelNote" android:screenOrientation="portrait"
+        	android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".ViewNote" android:screenOrientation="portrait"
+        	android:windowSoftInputMode="stateHidden"></activity>
+		<uses-library android:name="com.google.android.maps" />
+    </application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+</manifest>
